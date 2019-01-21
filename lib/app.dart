@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utag_mobile/common/styles.dart';
 import 'package:utag_mobile/common/thin_icons_icons.dart';
 import 'package:utag_mobile/navigation/fab_bottom_app_bar.dart';
 import 'package:gradient_widgets/gradient_widgets.dart';
@@ -45,7 +46,7 @@ class _UTagApp extends State<UTagApp> with TickerProviderStateMixin {
       ),
       bottomNavigationBar: FABBottomAppBar(
         color: Colors.grey,
-        selectedColor: Color.fromRGBO(78, 84, 200, 1),
+        selectedColor: CommonStyles.primaryColor,
         notchedShape: CircularNotchedRectangle(),
         onTabSelected: _selectedTab,
         items: [
@@ -59,7 +60,7 @@ class _UTagApp extends State<UTagApp> with TickerProviderStateMixin {
       floatingActionButton: CircularGradientButton(
                  child: Icon(ThinIcons.diamond),
                  callback: _selectedFab,
-                 gradient: Gradients.buildGradient(Alignment(-1, 0), Alignment(0.5, 0.5), [Color.fromRGBO(78, 84, 200, 1), Color.fromRGBO(143, 148, 251, 1)]),
+                 gradient: CommonStyles.primaryGradient,
            ),
     );
   }

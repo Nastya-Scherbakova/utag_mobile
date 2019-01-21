@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utag_mobile/app.dart';
+import 'package:utag_mobile/common/styles.dart';
 import 'package:utag_mobile/login.dart';
 
 void main() => runApp(MyApp());
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'UTag',
+      theme: ThemeData(primaryColor: CommonStyles.primaryColor),
       home: UTagApp(title: 'UTag'),
       initialRoute: '/login',
       onGenerateRoute: _getRoute,
